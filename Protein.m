@@ -1,8 +1,11 @@
 clf;clc;close all;
 
-fileName='4.tif';
+fileName='..\Images\4.tif';
 imgData= rgb2gray(imread(fileName));
 info=imfinfo (fileName);
+size(imgData);
+
+[imgDataAMF,index]=amf(imgData,15,0,0);
 size(imgData);
 
 %{
